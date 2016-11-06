@@ -9,6 +9,9 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import id.sch.smktelkom_mlg.learn.recyclerview1.R;
+import id.sch.smktelkom_mlg.learn.recyclerview1.model.Hotel;
+
 /**
  * Created by Affandhy on 06/11/2016.
  */
@@ -18,9 +21,13 @@ public class HotelAdapter extends RecyclerView.Adapter<HotelAdapter.ViewHolder>
 {
     ArrayList<Hotel> hotelList;
 
+    public HotelAdapter(ArrayList<Hotel> hotelList) {
+        this.hotelList = hotelList;
+    }
+
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.Layout.item_list, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list, parent, false);
         ViewHolder vh = new ViewHolder(v);
         return vh;
 
@@ -45,7 +52,7 @@ public class HotelAdapter extends RecyclerView.Adapter<HotelAdapter.ViewHolder>
 
         public ViewHolder(View itemView) {
             super(itemView);
-            ivFoto = (ImageView) itemView.findViewById(R.id.imageView);
+            ivFoto = (ImageView) itemView.findViewById(R.id.ImageView);
             tvJudul = (TextView) itemView.findViewById(R.id.textViewJudul);
             tvDeskripsi = (TextView) itemView.findViewById(R.id.textViewDeskripsi);
 

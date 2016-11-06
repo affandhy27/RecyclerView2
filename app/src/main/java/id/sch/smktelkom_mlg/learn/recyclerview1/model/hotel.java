@@ -6,13 +6,13 @@ import android.graphics.drawable.Drawable;
  * Created by Affandhy on 06/11/2016.
  */
 
-public class hotel {
+public class Hotel {
 
     public String Judul;
     public String Deskripsi;
     public Drawable foto;
 
-    public hotel(String Judul, String Deskripsi, Drawable foto) {
+    public Hotel(String Judul, String Deskripsi, Drawable foto) {
         this.Judul = Judul;
         this.Deskripsi = Deskripsi;
         this.foto = foto;
