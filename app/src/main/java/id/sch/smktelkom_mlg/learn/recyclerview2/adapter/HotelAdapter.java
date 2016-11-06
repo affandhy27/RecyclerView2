@@ -1,4 +1,4 @@
-package id.sch.smktelkom_mlg.learn.recyclerview1.adapter;
+package id.sch.smktelkom_mlg.learn.recyclerview2.adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -9,8 +9,8 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import id.sch.smktelkom_mlg.learn.recyclerview1.R;
-import id.sch.smktelkom_mlg.learn.recyclerview1.model.Hotel;
+import id.sch.smktelkom_mlg.learn.recyclerview2.R;
+import id.sch.smktelkom_mlg.learn.recyclerview2.model.Hotel;
 
 /**
  * Created by Affandhy on 06/11/2016.
@@ -30,12 +30,14 @@ public class HotelAdapter extends RecyclerView.Adapter<HotelAdapter.ViewHolder>
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list, parent, false);
         ViewHolder vh = new ViewHolder(v);
         return vh;
-
     }
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-
+        Hotel hotel = hotelList.get(position);
+        holder.tvJudul.setText(hotel.Judul);
+        holder.tvDeskripsi.setText(hotel.Deskripsi);
+        holder.ivFoto.setImageDrawable(hotel.foto);
     }
 
     @Override
